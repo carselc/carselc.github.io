@@ -107,7 +107,7 @@ document.getElementById("clear").onclick = function() {
 }
 
 document.getElementById("return").onclick = function() {
-		output.innerHTML += "<br/>";
+		output.innerHTML += "<br />";
 }
 
 document.getElementById("export").onclick = function saveTextAsFile() {
@@ -119,6 +119,7 @@ document.getElementById("export").onclick = function saveTextAsFile() {
     var fileNameToSaveAs = "output.txt";
     var downloadLink = document.createElement("a");
 
+    textToSave = textToSave.replace("<br/>", "\r\n");
     downloadLink.download = fileNameToSaveAs;
     downloadLink.href = textToSaveAsURL;
     document.body.appendChild(downloadLink);
