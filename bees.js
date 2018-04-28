@@ -1,7 +1,3 @@
-//In whatever state it's in it should feel finished, should appear to be finished
-
-console.log("hello, world");
-
 beeword = bee[0]
 //caseyword = casey[0]
 //select a random word
@@ -113,13 +109,15 @@ document.getElementById("return").onclick = function() {
 document.getElementById("export").onclick = function saveTextAsFile() {
 
     var textToSave = document.getElementById("output").innerHTML;
-
+	textToSave = textToSave.replace(/<br\/>/g, "\r\n");
+	textToSave = textToSave.replace(/<br \/>/g, "\r\n");
+	textToSave = textToSave.replace(/<br>/g, "\r\n");
+	textToSave = textToSave.replace(/[A-Z]/g, "lowercase");
     var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
     var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
     var fileNameToSaveAs = "output.txt";
     var downloadLink = document.createElement("a");
 
-    textToSave = textToSave.replace("<br />", "\r\n");
     downloadLink.download = fileNameToSaveAs;
     downloadLink.href = textToSaveAsURL;
     document.body.appendChild(downloadLink);
