@@ -119,7 +119,7 @@ document.getElementById("export").onclick = function saveTextAsFile() {
     var fileNameToSaveAs = "output.txt";
     var downloadLink = document.createElement("a");
 
-    textToSave = textToSave.replace("<br/>", "\r\n");
+    textToSave = textToSave.replace("<br />", "\r\n");
     downloadLink.download = fileNameToSaveAs;
     downloadLink.href = textToSaveAsURL;
     document.body.appendChild(downloadLink);
@@ -142,7 +142,6 @@ document.getElementById("import").onclick = function() {
    // } else {
   // source.innerHTML = newText;
   newText = strip_string(newText);
-
 
   input_word_array = newText.split(" ");
   current_source_array = input_word_array;
