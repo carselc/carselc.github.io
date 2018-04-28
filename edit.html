@@ -1,20 +1,27 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>esther</title>
+	<title>edit</title>
 
 	<style>
 
 	body {
-		background-color: rgb(78, 152, 228);
+		background-color: rgb(255, 242, 101);
 	}
 
 	div#content {
-		
+		width: 70%;
+		margin: 2%;
+		margin-bottom: -5%;
+		margin-left: 10%;
+		margin-top: 5%;
+		margin-right: 10%;
+		float: left;
+		border: solid 0px #333333;
+		color: rgb(22,41,62);
+		font-size: 1.5vmax;
+		text-transform: lowercase;
+
 	}
 
 	div#source, div#output {
@@ -39,48 +46,40 @@
 	}
 
 	div#buttons {
-		position: absolute;
-	    right: 2%;
-	    bottom: 3%;
+		float: right;
+		margin-right: -26.5%;
+		margin-bottom: 3%;
 	}
 
 	.button {
-	    background-color: rgb(66,129,193);
+	    background-color: rgb(252, 252, 228);
 	    border: solid 1px;
 	    color: rgb(22,41,62);
-	    padding: 5px 10px;
+		padding: 5px 10px;
 	    text-align: center;
 	    font-size: 14px;
 	    cursor: pointer;
 	    border-radius: 6px;
-	    
+	    /*font-family: "times new roman"*/
 
 	}
 
 	.button:hover {
-	    background-color: rgba(244,244,150);
-	    color: rgb(66,129,193);
+	    background-color: rgba(66,129,193);
+	    color: rgb(244,244,150);
+
 	}
 
 	a {
 
 		text-decoration: none;
-		color: rgb(22,41,62);
-
+	    color: rgb(22,41,62);
 
 	}
 
 	a:hover {
-	    background-color: rgba(244,244,150);
-	    color: rgb(66,129,193);
-		
-	}
-
-	div.prompt {
-
-		width:200px; 
-		height:600px;
-
+	    background-color: rgba(66,129,193);
+	    color: rgb(244,244,150);
 	}
 
 	</style>
@@ -91,21 +90,22 @@
 	<div id="content"> 
 		<div id="source"> </div>
 		<div id="output"> </div>
-	
+
+<form action="/action_page.php">
+  <textarea name="edit" style="width:40vmax; height:40vmax"></textarea>
+  <br>
+</form>
+
+</body>
+
 	<div id="buttons">
-		<button id="return" class="button">return</button>
-		<button id="import" class="button">import</button>
-		<button id="shuffle" class="button">shuffle</button>
 		<button id="export" class="button">export</button>
-		<!-- <button id="edit" class="button"><a href="edit.html">edit</button> -->
-		<button id="clear" class="button">clear</button>
-		<button id="garlic salt" class="button"><a href="pagetwo.html">garlic salt</a></button>
+		<button id="home" class="button"><a href="https://carselc.github.io/">home</a></button>
+
 
 	</div>
 
 	</div>
 </body>
-<script  src="sourceArrays.js"></script>
-<script  src="bees.js"></script>
-</html>
 
+</html>
