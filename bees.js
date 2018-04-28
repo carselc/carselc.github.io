@@ -149,8 +149,11 @@ document.getElementById("import").onclick = function() {
   for(i=0; i<400; i++) {
 	make_random_words(current_source_array);
 	}
+}
 
+document.getElementById("help").onclick = function() {
 
-   
+  alert("click on words on the left side of the screen to create a text on the right side of the screen. the buttons on the bottom right provide additional options.\n\nreturn: create a line break. \n\nimport: replace the default input text with a text of your choosing (the default input text is a mesh of getrude stein's 'yet dish' and maggie nelson's 'the argonauts'). \n\nshuffle: shuffle the input text words.  \n\nexport: export your output text as a txt file. \n\nclear: clear your output text from the screen. \n\ngarlic salt: read a poem created via esther. section i shows the original output text, section ii is the revised output text, and section iii is the final poem.")
 
 }
+
